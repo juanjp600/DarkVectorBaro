@@ -1,32 +1,47 @@
 {
-	"name": "DarkVector",
+	"name": "DarkVectorBaro",
 	"author": [
 		"Malvineous",
-		"Martynov Maxim"
+		"Martynov Maxim",
+		"FakeFish"
 	],
 	"url": "https://www.mediawiki.org/wiki/Skin:DarkVector",
-	"descriptionmsg": "darkvector-skin-desc",
-	"namemsg": "skinname-darkvector",
+	"descriptionmsg": "darkvectorbaro-skin-desc",
+	"namemsg": "skinname-darkvectorbaro",
 	"license-name": "GPL-2.0+",
 	"type": "skin",
 	"ConfigRegistry": {
-		"darkvector": "GlobalVarConfig::newInstance"
+		"darkvectorbaro": "GlobalVarConfig::newInstance"
 	},
 	"ValidSkinNames": {
-		"darkvector": "DarkVector"
+		"darkvectorbaro": "DarkVectorBaro"
 	},
 	"MessagesDirs": {
-		"DarkVector": [
+		"DarkVectorBaro": [
 			"i18n"
 		]
 	},
 	"AutoloadClasses": {
-		"SkinDarkVector": "SkinDarkVector.php",
-		"DarkVectorTemplate": "DarkVectorTemplate.php"
+		"SkinDarkVectorBaro": "SkinDarkVectorBaro.php",
+		"DarkVectorBaroTemplate": "DarkVectorBaroTemplate.php"
 	},
-	"@note": "When modifying skins.darkvector.styles definition, make sure the installer still works",
+	"@note": "When modifying skins.darkvectorbaro.styles definition, make sure the installer still works",
 	"ResourceModules": {
-		"skins.darkvector.styles": {
+		"skins.darkvectorbaro.styles": {
+			"class": "ResourceLoaderSkinModule",
+			"features": {
+				"content-links": true,
+				"content-media": true,
+				"interface-message-box": true,
+				"interface-category": true,
+				"content-tables": true,
+				"i18n-ordered-lists": true,
+				"i18n-all-lists-margins": true,
+				"i18n-headings": true,
+				"elements": true,
+				"interface": true,
+				"logo": true
+			},
 			"position": "top",
 			"styles": {
 				"screen.less": {
@@ -37,7 +52,7 @@
 				}
 			}
 		},
-		"skins.darkvector.styles.responsive": {
+		"skins.darkvectorbaro.styles.responsive": {
 			"position": "top",
 			"styles": {
 				"responsive.less": {
@@ -45,24 +60,23 @@
 				}
 			}
 		},
-		"skins.darkvector.js": {
+		"skins.darkvectorbaro.js": {
 			"scripts": [
 				"collapsibleTabs.js",
-				"darkvector.js"
+				"darkvectorbaro.js"
 			],
 			"position": "top",
 			"dependencies": [
-				"jquery.throttle-debounce",
-				"jquery.tabIndex"
+				"mediawiki.util"
 			]
 		}
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
-		"remoteSkinPath": "DarkVector"
+		"remoteSkinPath": "DarkVectorBaro"
 	},
 	"ResourceModuleSkinStyles": {
-		"darkvector": {
+		"darkvectorbaro": {
 			"jquery.tipsy": "skinStyles/jquery.tipsy.less",
 			"jquery.ui.core": [
 				"skinStyles/jquery.ui/jquery.ui.core.css",
@@ -89,9 +103,9 @@
 		}
 	},
 	"config": {
-		"DarkVectorUseSimpleSearch": true,
-		"DarkVectorUseIconWatch": true,
-		"DarkVectorResponsive": false
+		"DarkVectorBaroUseSimpleSearch": true,
+		"DarkVectorBaroUseIconWatch": true,
+		"DarkVectorBaroResponsive": false
 	},
 	"manifest_version": 1
 }

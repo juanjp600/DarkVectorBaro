@@ -9,7 +9,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #c1c1c1
+    color: #e4d9a7
 }
 
 div.mw-number-text {
@@ -17,7 +17,7 @@ div.mw-number-text {
 }
 
 div.mw-number-text h3 {
-    color: #c1c1c1 !important;
+    color: #e4d9a7 !important;
 }
 
 hr {
@@ -27,7 +27,7 @@ hr {
 pre,
 .mw-code {
     color: #ccc !important;
-    background-color: #4C4C4C !important;
+    background-color: #2C2C2C !important;
     border: none;
 }
 
@@ -36,12 +36,12 @@ pre,
 }
 
 .CategoryTreeToggle {
-    color: #e69710;
+    color: #add4ba;
 }
 
 .editOptions {
     color: #a8a8a8;
-    background-color: #333;
+    background-color: #0c0d0b;
     border-color: #4c4c4c;
 }
 
@@ -49,7 +49,7 @@ input,
 textarea {
     background-color: #4c4c4c;
     border-color: #4c4c4c;
-    color: #c1c1c1;
+    color: #e4d9a7;
 }
 
 .oo-ui-radioInputWidget input[type="radio"]:checked + span {
@@ -63,8 +63,8 @@ textarea {
 
 .uls-menu .uls-search {
     background-color: transparent !important;
-    border-top-color: #e69710 !important;
-    border-bottom-color: #e69710 !important;
+    border-top-color: #add4ba !important;
+    border-bottom-color: #add4ba !important;
     background-image: none!important;
 }
 
@@ -132,13 +132,13 @@ a,
 .mw-body a.external,
 .mw-body a.extiw,
 .uls-language-list a {
-    color: #e69710 !important;
+    color: #add4ba;
 }
 
 a:visited,
 .mw-body a.external:visited,
 .mw-body a.extiw:visited {
-    color: #db8200;
+    color: #add4ba;
 }
 
 a.new,
@@ -160,7 +160,7 @@ div.thumbinner,
 div.toc,
 ul#filetoc,
 li.gallerybox div.thumb {
-    background-color: #3d3d3d;
+    background-color: #121212;
     border-color: #666
 }
 
@@ -176,24 +176,17 @@ table.wikitable,
 table.wikitable>*>tr>th,
 table.wikitable>*>tr>td,
 pre {
-    color: #c1c1c1;
-    background-color: #4c4c4c;
+    color: #e4d9a7;
+    background-color: #121212;
     border-color: #666
 }
 
 table.mw_metadata th,
 table.wikitable>*>tr>th {
-    background-color: #595959
+    background-color: #333
 }
 
-.infobox>caption,
-.navbox2 th {
-    background: #595959;
-}
-
-.infobox th {
-    background: #4c4c4c;
-}
+/*.mw-collapsible { padding: 1.3em; }*/
 
 #preferences {
     background-color: transparent;
@@ -209,7 +202,7 @@ table.wikitable>*>tr>th {
     border-left: 1px solid #ccc;
     border-collapse: collapse;
     background-color: transparent;
-    color: #D28A0D;
+    color: #add4ba;
 }
 
 .wikiEditor-ui,
@@ -243,33 +236,162 @@ div#simpleSearch {
 .oo-ui-textInputWidget input,
 .oo-ui-textInputWidget textarea,
 div#simpleSearch #searchInput {
-    background-color: #4C4C4C !important;
-    color: #C1C1C1 !important;
+    background-color: #111 !important;
+    color: #e4d9a7 !important;
 }
 
 div#simpleSearch #searchInput {
     height: 100% !important;
     padding: 0 !important;
+    padding-left: 0.5rem !important;
 }
 
 div#simpleSearch #searchButton {
-    background-color: rgba(210, 138, 13, 0.27)!important;
+    background-color: rgba(210, 138, 13, 0.8)!important;
 }
 
-.oo-ui-buttonElement-button,
-.mw-ui-button {
-    color: #ffffff !important;
-    background-color: #e69710 !important;
-    border-color: #e69710 !important;
+body .ace-tm .ace_gutter,
+body .codeEditor-status {
+    background-color: #121212;
+    color: #555;
 }
 
-.oo-ui-buttonElement-button:hover,
-.mw-ui-button:hover {
-    color: #ffffff !important;
-    ;
-    background-color: #D28A0D !important;
-    border-color: #D28A0D !important;
+body .ace-tm .ace_gutter-active-line {
+    background-color: #242436;
 }
+
+body .ace_scroller {
+    background-color: #0d0d0d;
+    color: #aaa;
+}
+
+body .ace-tm .ace_cursor {
+    color:#aaa;
+}
+
+body .ace-tm .ace_constant.ace_numeric,
+body .ace-tm .ace_storage,
+body .ace-tm .ace_keyword {
+    color: #4444ff;
+}
+
+body .ace-tm .ace_entity.ace_name.ace_function {
+    color: #5577ff;
+}
+
+body .ace-tm .ace_marker-layer .ace_active-line {
+    background-color: rgba(255,255,255,0.07);
+}
+
+body .oo-ui-buttonElement-button,
+body .mw-ui-button,
+body .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button,
+body .oo-ui-processDialog-actions-safe .oo-ui-widget-enabled.oo-ui-iconElement:not(.oo-ui-labelElement) > .oo-ui-buttonElement-button {
+    color: #ffffff;
+    background-color: #2d4f3a;
+    border-color: #2d4f3a;
+}
+
+body .oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button {
+    color: #fff;
+}
+
+body .mw-rcfilters-ui-highlightColorPickerWidget .oo-ui-buttonElement-button,
+body .mw-rcfilters-ui-highlightColorPickerWidget .oo-ui-buttonElement-button:hover,
+body .mw-rcfilters-ui-highlightColorPickerWidget .oo-ui-buttonElement-button:hover:active,
+body .mw-rcfilters-ui-highlightColorPickerWidget .oo-ui-buttonElement-button:active {
+    background-color: transparent;
+}
+
+body .toc, body .mw-warning, body .toccolours {
+    background-color: #5c3a00;
+}
+
+body .oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle {
+    background-color: #222;
+    color: #aaa;
+}
+
+body .oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle:hover {
+    background-color: #333;
+    color: #aaa;
+}
+
+body .oo-ui-tabSelectWidget-framed {
+    background-color: #121212;
+}
+
+body .mw-widget-mediaResultWidget-error {
+    background-color: #220000;
+}
+
+body .oo-ui-selectFileWidget.oo-ui-widget-enabled.oo-ui-selectFileWidget-dropTarget {
+    background-color: #121212;
+}
+
+body .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected .oo-ui-labelElement-label {
+    color: #aaa;
+}
+
+body .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected {
+    background-color: #556;
+}
+
+body .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-widget-enabled.oo-ui-optionWidget-selected:hover {
+    background-color: #778;
+}
+
+body .oo-ui-pendingElement-pending,
+body .oo-ui-window.head.oo-ui-pendingElement-pending {
+    background-color: #222;
+    background-image: -webkit-linear-gradient(135deg, #333 25%, transparent 25%, transparent 50%, #333 50%, #333 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(135deg, #333 25%, transparent 25%, transparent 50%, #333 50%, #333 75%, transparent 75%, transparent);
+    background-image: linear-gradient(135deg, #333 25%, transparent 25%, transparent 50%, #333 50%, #333 75%, transparent 75%, transparent);
+}
+
+
+html body .mw-notification {
+    background-color: #121212;
+    color: #aaa;
+}
+
+body #mw-searchoptions {
+    background-color: #121212;
+}
+
+body .oo-ui-buttonElement-framed.oo-ui-widget-disabled > .oo-ui-buttonElement-button {
+    background-color: #444;
+}
+
+body .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined .mw-rcfilters-ui-tagItemWidget-selected.oo-ui-tagItemWidget.oo-ui-widget-enabled {
+    background-color: #333;
+}
+
+body #msupload-list .file {
+    background-color: #222;
+}
+
+body .oo-ui-buttonElement-button:hover,
+body .mw-ui-button:hover,
+body .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button:hover,
+body .oo-ui-tagItemWidget.oo-ui-widget-enabled .oo-ui-buttonElement-button:hover,
+body .oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button:hover,
+body .oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button:hover,
+body .oo-ui-processDialog-actions-safe .oo-ui-widget-enabled.oo-ui-iconElement:not(.oo-ui-labelElement) > .oo-ui-buttonElement-button:hover {
+    color: #ffffff;
+    background-color: #5f836c;
+    border-color: #5f836c;
+}
+
+body .oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button {
+    color: #5ae;
+}
+
+body .oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:hover {
+    color: #7df;
+}
+
+.mw-headline { color: #e2d9a4 }
 
 .oo-ui-dropdownInputWidget select,
 .oo-ui-dropdownInputWidget.oo-ui-widget-enabled,
@@ -300,22 +422,24 @@ td.diff-context {
 }
 
 .gallerytext p {
-    color: rgba(0, 0, 0, 0.8);
+    color: gray; font-style: oblique; font-size: small
 }
 
-#left-navigation div.darkvectorTabs,
-#right-navigation div.darkvectorTabs {
+small { font-size: 0.8rem }
+
+#left-navigation div.darkvectorbaroTabs,
+#right-navigation div.darkvectorbaroTabs {
     background-image: inherit;
-    background-color: #250b2d
+    background-color: #1e2924;
 }
 
-#left-navigation div.darkvectorTabs ul,
-#right-navigation div.darkvectorTabs ul {
-    background-color: #250b2d
+#left-navigation div.darkvectorbaroTabs ul,
+#right-navigation div.darkvectorbaroTabs ul {
+    background-color: #343434
 }
 
-#left-navigation div.darkvectorTabs ul li,
-#right-navigation div.darkvectorTabs ul li {
+#left-navigation div.darkvectorbaroTabs ul li,
+#right-navigation div.darkvectorbaroTabs ul li {
     background-color: #222;
     background-image: -moz-linear-gradient(top, #2e2e2e 20%, #222 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #2e2e2e), color-stop(100%, #222));
@@ -323,78 +447,114 @@ td.diff-context {
     background-image: linear-gradient(#2e2e2e 20%, #222 100%)
 }
 
-#left-navigation div.darkvectorTabs li.new a,
-#right-navigation div.darkvectorTabs li.new a,
-#left-navigation div.darkvectorTabs li.new a:visited,
-#right-navigation div.darkvectorTabs li.new a:visited {
+#left-navigation div.darkvectorbaroTabs li.new a,
+#right-navigation div.darkvectorbaroTabs li.new a,
+#left-navigation div.darkvectorbaroTabs li.new a:visited,
+#right-navigation div.darkvectorbaroTabs li.new a:visited {
     color: #d44
 }
 
-#left-navigation div.darkvectorTabs li.selected,
-#right-navigation div.darkvectorTabs li.selected {
-    background-color: #333;
-    background-image: -moz-linear-gradient(top, #e69710 0, #333 10%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e69710), color-stop(10%, #333));
-    background-image: -webkit-linear-gradient(top, #e69710 0, #333 10%);
-    background-image: linear-gradient(#e69710 0, #333 10%)
+#left-navigation div.darkvectorbaroTabs li.selected,
+#right-navigation div.darkvectorbaroTabs li.selected {
+    background-color: #1e2924;
+    background-image: -moz-linear-gradient(top,#add4ba 0,#1e2924 10%);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#add4ba),color-stop(10%,#add4ba));
+    background-image: -webkit-linear-gradient(top,#add4ba 0,#1e2924 10%);
+    background-image: linear-gradient(#add4ba 0,#1e2924 10%);
 }
 
-#left-navigation div.darkvectorTabs li.selected a,
-#right-navigation div.darkvectorTabs li.selected a,
-#left-navigation div.darkvectorTabs li.selected a:visited,
-#right-navigation div.darkvectorTabs li.selected a:visited {
-    color: #D28A0D
+#left-navigation div.darkvectorbaroTabs li.selected a,
+#right-navigation div.darkvectorbaroTabs li.selected a,
+#left-navigation div.darkvectorbaroTabs li.selected a:visited,
+#right-navigation div.darkvectorbaroTabs li.selected a:visited {
+    color: #add4ba
 }
 
-#left-navigation div.darkvectorTabs li a,
-#right-navigation div.darkvectorTabs li a {
-    color: #e69710
+#left-navigation div.darkvectorbaroTabs li a,
+#right-navigation div.darkvectorbaroTabs li a {
+    color: #add4ba
 }
 
-#left-navigation div.darkvectorTabs span,
-#right-navigation div.darkvectorTabs span {
+#left-navigation div.darkvectorbaroTabs span,
+#right-navigation div.darkvectorbaroTabs span {
     background: transparent
 }
 
-#mw-head #right-navigation div.darkvectorMenu h3 {
+#mw-head #right-navigation div.darkvectorbaroMenu h3 {
     background: inherit
 }
 
-#mw-head div.darkvectorMenu h3 span {
-    color: #e69710
+#mw-head div.darkvectorbaroMenu h3 span {
+    color: #add4ba
 }
 
-div.darkvectorMenu h3 a {
+div.darkvectorbaroMenu h3 a {
     background: inherit
 }
 
-div.darkvectorMenu ul {
+div.darkvectorbaroMenu ul {
     background-color: black;
     border: solid 1px #0c0c0c
 }
 
-div.darkvectorMenu li a {
-    color: #e69710
+div.darkvectorbaroMenu li a {
+    color: #add4ba
 }
 
-div.darkvectorMenu li.selected a,
-div.darkvectorMenu li.selected a:visited {
-    color: #D28A0D;
+div.darkvectorbaroMenu li.selected a,
+div.darkvectorbaroMenu li.selected a:visited {
+    color: #add4ba;
     text-decoration: none
 }
 
-div.darkvectorMenu#p-cactions div.menu {
-    border-color: #666
+div.darkvectorbaroMenu#p-cactions div.menu {
+    border-color: #666;
+    z-index: 5;
 }
 
-div.darkvectorMenu#p-cactions ul {
+div.darkvectorbaroMenu#p-cactions ul {
     border: 0;
-    background-color: #4c4c4c
+    background-color: #111;
+}
+
+body .wikiEditor-ui-toolbar {
+    background-color: #222;
+}
+
+div #msupload-div {
+    background-color: #222;
+}
+
+div #msupload-div #msupload-dropzone {
+    color: #aaa;
+}
+
+body .wikiEditor-ui-toolbar .tabs span.tab a,
+body .wikiEditor-ui-toolbar .tabs span.tab a.current,
+body .wikiEditor-ui-toolbar .tabs span.tab a.current:visited,
+body .wikiEditor-ui-toolbar .group .tool-select .label {
+    color: #add4ba;
+}
+
+body .wikiEditor-ui-toolbar .group .tool-select .options {
+    background-color: #222;
+}
+
+body .wikiEditor-ui-toolbar .group .tool-select .options .option {
+    color: #aaa;
+}
+
+body .wikiEditor-ui-toolbar .group .tool-select .menu .options .option:hover {
+    background-color: #2b4d38;
+}
+
+body .wikiEditor-ui-toolbar .group .label {
+    color: #aaa;
 }
 
 #mw-navigation #mw-panel div.portal {
     background-image: none;
-    border-top: 1px solid #4c4c4c
+    border-top: 0;/*1px solid #4c4c4c*/
 }
 
 #mw-navigation #mw-panel div.portal#p-logo,
@@ -415,18 +575,227 @@ body {
 }
 
 body {
-    background-color: #2a2a2a
+    background-color: #060e11;
+    background-image: url('images/wiki-background.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
 }
 
 .mw-body {
     margin-left: 10em;
     padding: 1em;
-    border: 1px solid #250b2d;
-    border-right-width: 0;
     margin-top: -1px;
-    background-color: #333;
-    color: #c1c1c1;
+    color: #e2d9a4; border: 0; border: 1px solid #16201a; border-top: 1px solid #506256; background: rgb(29,41,36);
+    background: -moz-linear-gradient(180deg, rgba(29,41,36,1) 0%, rgba(21,30,25,1) 10%, rgba(17,26,21,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(29,41,36,1) 0%, rgba(21,30,25,1) 10%, rgba(17,26,21,1) 100%);
+    background: linear-gradient(180deg, rgba(29,41,36,1) 0%, rgba(21,30,25,1) 10%, rgba(17,26,21,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1d2924",endColorstr="#111a15",GradientType=1);
     direction: ltr
+}
+
+body .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined {
+    background-color: #111;
+}
+
+body .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled {
+    background-color: #000;
+}
+
+body .mw-rcfilters-ui-filterTagMultiselectWidget.oo-ui-widget-enabled .oo-ui-tagMultiselectWidget-handle {
+    background-color: #111;
+}
+
+body .mw-rcfilters-ui-changesListWrapperWidget .mw-changeslist-legend {
+    background-color: #111;
+}
+
+body .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined .oo-ui-tagItemWidget.oo-ui-widget-enabled {
+    background-color: #000;
+    color: #fff;
+}
+
+body .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined .oo-ui-inputWidget-input {
+    background-color: #222 !important;
+}
+
+body .oo-ui-popupWidget-popup {
+    color: #ccc;
+    background-color: #111;
+}
+
+body .oo-ui-toolbar-bar {
+    color: #ccc;
+    background-color: #111;
+}
+
+body .oo-ui-barToolGroup-tools.oo-ui-toolGroup-enabled-tools .oo-ui-tool.oo-ui-widget-disabled.oo-ui-flaggedElement-primary > .oo-ui-tool-link, body .oo-ui-barToolGroup-tools.oo-ui-toolGroup-disabled-tools .oo-ui-tool.oo-ui-flaggedElement-primary > .oo-ui-tool-link {
+    background-color: #555;
+    color: #888;
+}
+
+body .oo-ui-window-content.oo-ui-dialog-content {
+    background-color: #121212;
+    color: #999;
+}
+
+body .oo-ui-messageDialog-title {
+    color: #bbb;
+}
+
+body .oo-ui-messageDialog-message {
+    color: #999;
+}
+
+body .oo-ui-windowManager-modal > .oo-ui-dialog {
+    background-color: rgba(0,0,0,0.5);
+}
+
+body .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame {
+    border-color: #000;
+    background-color: #000;
+}
+
+body .oo-ui-tool.oo-ui-widget-enabled > .oo-ui-tool-link:active,
+body .oo-ui-tool.oo-ui-widget-enabled > .oo-ui-tool-link:active:focus,
+body .oo-ui-tool.oo-ui-widget-enabled.oo-ui-tool-active > .oo-ui-tool-link,
+body .oo-ui-tool.oo-ui-widget-enabled.oo-ui-popupToolGroup-active > .oo-ui-tool-link {
+    background-color: #294a36;
+}
+
+body .oo-ui-popupToolGroup.oo-ui-popupToolGroup-active > .oo-ui-popupToolGroup-handle {
+    background-color: #294a36;
+}
+
+body .oo-ui-tool.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive > .oo-ui-tool-link:hover {
+    background-color: #213b2b;
+}
+
+body .oo-ui-tool.oo-ui-widget-enabled > .oo-ui-tool-link:hover {
+    background-color: #213b2b;
+}
+
+body .oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle:hover {
+    background-color: #213b2b;
+}
+
+body .oo-ui-listToolGroup-tools .oo-ui-tool.oo-ui-widget-enabled:hover {
+    background-color: #213b2b;
+    color: #ccc;
+}
+
+body .oo-ui-outlineOptionWidget.oo-ui-optionWidget-highlighted {
+    background-color: #213b2b;
+}
+
+body .oo-ui-outlineOptionWidget.oo-ui-optionWidget-highlighted.oo-ui-optionWidget-pressed {
+    background-color: #213b2b;
+    color: #add4ba;
+}
+
+body .oo-ui-outlineOptionWidget.oo-ui-optionWidget-selected {
+    background-color: #294a36;
+    color: #add4ba;
+}
+
+body .oo-ui-tool.oo-ui-widget-enabled > .oo-ui-tool-link:active,
+body .oo-ui-tool.oo-ui-widget-enabled > .oo-ui-tool-link:active:focus,
+body .oo-ui-tool.oo-ui-widget-enabled.oo-ui-tool-active > .oo-ui-tool-link,
+body .oo-ui-tool.oo-ui-widget-enabled.oo-ui-popupToolGroup-active > .oo-ui-tool-link,
+body .oo-ui-popupToolGroup.oo-ui-popupToolGroup-active > .oo-ui-popupToolGroup-handle,
+body .oo-ui-popupToolGroup.oo-ui-popupToolGroup-active > .oo-ui-popupToolGroup-handle:hover,
+body .oo-ui-listToolGroup-tools .oo-ui-tool-active.oo-ui-widget-enabled .oo-ui-tool-link .oo-ui-tool-title,
+body .oo-ui-popupToolGroup-tools .oo-ui-tool-active.oo-ui-widget-enabled .oo-ui-tool-link .oo-ui-tool-title {
+    color: #add4ba;
+}
+
+body .oo-ui-popupToolGroup-tools {
+    background-color: #121212;
+}
+
+body .mw-rcfilters-ui-filterMenuHeaderWidget-header {
+    background-color: #222;
+}
+
+body .mw-rcfilters-ui-filterMenuSectionOptionWidget {
+    background-color: #0a0a0a;
+}
+
+body .mw-rcfilters-ui-menuSelectWidget-footer {
+    background-color: #0a0a0a;
+}
+
+body .mw-rcfilters-ui-filterMenuOptionWidget.oo-ui-flaggedElement-muted:not(.oo-ui-optionWidget-selected) {
+    background-color: #333;
+}
+
+body .mw-rcfilters-ui-filterMenuHeaderWidget-title,
+body .oo-ui-menuOptionWidget.oo-ui-widget-enabled.oo-ui-optionWidget {
+    color: #aaa;
+}
+
+body .oo-ui-menuSelectWidget {
+    background-color: #121212;
+}
+
+body .mw-rcfilters-ui-itemMenuOptionWidget.oo-ui-optionWidget-selected,
+body .oo-ui-menuOptionWidget.oo-ui-widget-enabled.oo-ui-optionWidget-selected {
+    background-color: #222;
+    color: #aaa;
+}
+
+body .mw-rcfilters-ui-itemMenuOptionWidget.oo-ui-optionWidget-highlighted
+body .oo-ui-menuOptionWidget.oo-ui-widget-enabled.oo-ui-optionWidget.oo-ui-optionWidget-highlighted,
+body .oo-ui-dropdownWidget.oo-ui-widget-enabled.oo-ui-dropdownWidget-open .oo-ui-dropdownWidget-handle,
+body .oo-ui-menuOptionWidget.oo-ui-optionWidget-highlighted {
+    background-color: #222834;
+    color: #aaa;
+}
+
+body .oo-ui-windowManager-modal > .oo-ui-dialog > .oo-ui-window-frame {
+    background-color: #121212;
+}
+
+body .ve-ui-mwSaveDialog-options {
+    background-color: #121212;
+}
+
+
+body [data-diff-action='insert'], table[data-diff-action='insert'] > caption, figure[data-diff-action='insert'] > figcaption {
+    color: #000 !important;
+}
+
+body [data-diff-action='remove'], table[data-diff-action='remove'] > caption, figure[data-diff-action='remove'] > figcaption {
+    color: #000 !important;
+}
+
+body .diff-addedline .diffchange {
+    background-color: #003300 !important;
+    color: #00aa00 !important;
+}
+
+body .diff-addedline {
+    border-color: #005500;
+}
+
+body .diff-deletedline .diffchange {
+    background-color: #330000 !important;
+    color: #aa0000 !important;
+}
+
+body .diff-deletedline {
+    border-color: #550000;
+}
+
+body .mw-rcfilters-ui-itemMenuOptionWidget-label-title {
+    color: #aaa;
+}
+
+body .mw-search-profile-tabs {
+    background-color: #222;
+}
+
+body .search-types .current a {
+    color: #aa9;
 }
 
 .mw-body .mw-editsection,
@@ -442,10 +811,18 @@ body {
 .mw-body h1,
 .mw-body h2,
 .mw-body #firstHeading {
-    font-family: "Linux Libertine", Georgia, Times, serif;
+    font-family: sans-serif;
     line-height: 1.3;
     margin-bottom: .25em;
-    padding: 0
+    padding: 0;
+}
+
+.mw-body h2 {
+    border-bottom: 0
+}
+
+.mw-body h1 {
+    border-bottom-color: #e4d9a7;
 }
 
 .mw-body h1,
@@ -521,44 +898,44 @@ pre,
     font-size: .875em
 }
 
-body.darkvector-animateLayout .mw-body,
-body.darkvector-animateLayout #footer,
-body.darkvector-animateLayout #left-navigation {
+body.darkvectorbaro-animateLayout .mw-body,
+body.darkvectorbaro-animateLayout #footer,
+body.darkvectorbaro-animateLayout #left-navigation {
     -webkit-transition: margin-left 250ms, padding 250ms;
     -moz-transition: margin-left 250ms, padding 250ms;
     -o-transition: margin-left 250ms, padding 250ms;
     transition: margin-left 250ms, padding 250ms
 }
 
-body.darkvector-animateLayout #p-logo {
+body.darkvectorbaro-animateLayout #p-logo {
     -webkit-transition: left 250ms;
     -moz-transition: left 250ms;
     -o-transition: left 250ms;
     transition: left 250ms
 }
 
-body.darkvector-animateLayout #mw-panel {
+body.darkvectorbaro-animateLayout #mw-panel {
     -webkit-transition: padding-right 250ms;
     -moz-transition: padding-right 250ms;
     -o-transition: padding-right 250ms;
     transition: padding-right 250ms
 }
 
-body.darkvector-animateLayout #p-search {
+body.darkvectorbaro-animateLayout #p-search {
     -webkit-transition: margin-right 250ms;
     -moz-transition: margin-right 250ms;
     -o-transition: margin-right 250ms;
     transition: margin-right 250ms
 }
 
-body.darkvector-animateLayout #p-personal {
+body.darkvectorbaro-animateLayout #p-personal {
     -webkit-transition: right 250ms;
     -moz-transition: right 250ms;
     -o-transition: right 250ms;
     transition: right 250ms
 }
 
-body.darkvector-animateLayout #mw-head-base {
+body.darkvectorbaro-animateLayout #mw-head-base {
     -webkit-transition: margin-left 250ms;
     -moz-transition: margin-left 250ms;
     -o-transition: margin-left 250ms;
@@ -567,9 +944,13 @@ body.darkvector-animateLayout #mw-head-base {
 
 #p-personal {
     position: absolute;
-    top: .33em;
-    right: .75em;
-    z-index: 100
+	top: 0;
+	right: 0;
+    padding: .33em .75em .33em .75em;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 100;
+    font-size: medium;
+    /*text-transform: uppercase*/
 }
 
 #p-personal h3 {
@@ -580,7 +961,6 @@ body.darkvector-animateLayout #mw-head-base {
     list-style-type: none;
     list-style-image: none;
     margin: 0;
-    padding-left: 10em
 }
 
 #p-personal li {
@@ -590,6 +970,10 @@ body.darkvector-animateLayout #mw-head-base {
     margin-top: .5em;
     font-size: .75em;
     white-space: nowrap
+}
+
+#p-personal li#pt-userpage {
+    margin-left: 0;
 }
 
 #pt-userpage,
@@ -604,8 +988,7 @@ body.darkvector-animateLayout #mw-head-base {
 
 #p-search {
     float: left;
-    margin-right: .5em;
-    margin-left: .5em
+    margin: 0;
 }
 
 #p-search h3 {
@@ -614,16 +997,13 @@ body.darkvector-animateLayout #mw-head-base {
 
 #p-search form,
 #p-search input {
-    margin: 0;
-    margin-top: .4em
+    margin: 0; padding: 0;
 }
 
 div#simpleSearch {
     display: block;
-    width: 12.6em;
+    margin: 0; height: 2.5em; width: 15em;
     padding-right: 1.4em;
-    height: 1.4em;
-    margin-top: .65em;
     position: relative;
     min-height: 1px;
     border: solid 1px #aaa;
@@ -678,7 +1058,7 @@ div#simpleSearch #mw-searchButton {
     position: absolute;
     top: 0;
     right: 0;
-    width: 1.65em;
+    width: 3em; background-color: #add4ba !important;
     height: 100%;
     cursor: pointer;
     text-indent: -99999px;
@@ -697,11 +1077,11 @@ div#simpleSearch #mw-searchButton {
     z-index: 1
 }
 
-div.darkvectorTabs h3 {
+div.darkvectorbaroTabs h3 {
     display: none
 }
 
-div.darkvectorTabs {
+div.darkvectorbaroTabs {
     float: left;
     height: 2.5em;
     background-image: url('images/tab-break.png');
@@ -710,7 +1090,7 @@ div.darkvectorTabs {
     padding-left: 1px
 }
 
-div.darkvectorTabs ul {
+div.darkvectorbaroTabs ul {
     float: left;
     height: 100%;
     list-style-type: none;
@@ -722,7 +1102,7 @@ div.darkvectorTabs ul {
     background-repeat: no-repeat
 }
 
-div.darkvectorTabs ul li {
+div.darkvectorbaroTabs ul li {
     float: left;
     line-height: 1.125em;
     display: inline-block;
@@ -736,85 +1116,85 @@ div.darkvectorTabs ul li {
     white-space: nowrap
 }
 
-div.darkvectorTabs ul>li {
+div.darkvectorbaroTabs ul>li {
     display: block
 }
 
-div.darkvectorTabs li.new a,
-div.darkvectorTabs li.new a:visited {
+div.darkvectorbaroTabs li.new a,
+div.darkvectorbaroTabs li.new a:visited {
     color: #a55858
 }
 
-div.darkvectorTabs li.selected {
+div.darkvectorbaroTabs li.selected {
     background-image: url('images/tab-current-fade.png')
 }
 
-div.darkvectorTabs li.selected a,
-div.darkvectorTabs li.selected a:visited {
+div.darkvectorbaroTabs li.selected a,
+div.darkvectorbaroTabs li.selected a:visited {
     color: #333;
     text-decoration: none
 }
 
-div.darkvectorTabs li.icon a {
+div.darkvectorbaroTabs li.icon a {
     background-position: bottom right;
     background-repeat: no-repeat
 }
 
-div.darkvectorTabs li a {
+div.darkvectorbaroTabs li a {
     display: inline-block;
     height: 1.9em;
     padding-left: .5em;
     padding-right: .5em;
-    color: #e69710;
+    color: #add4ba;
     cursor: pointer;
     font-size: .8em
 }
 
-div.darkvectorTabs li>a {
+div.darkvectorbaroTabs li>a {
     display: block
 }
 
-div.darkvectorTabs span {
+div.darkvectorbaroTabs span {
     display: inline-block;
     background-image: url('images/tab-break.png');
     background-position: bottom right;
     background-repeat: no-repeat
 }
 
-div.darkvectorTabs span a {
+div.darkvectorbaroTabs span a {
     display: inline-block;
     padding-top: 1.25em
 }
 
-div.darkvectorTabs span>a {
+div.darkvectorbaroTabs span>a {
     float: left;
     display: block
 }
 
-div.darkvectorMenu {
+div.darkvectorbaroMenu {
     direction: ltr;
     float: left;
     cursor: pointer;
     position: relative
 }
 
-body.rtl div.darkvectorMenu {
+body.rtl div.darkvectorbaroMenu {
     direction: rtl
 }
 
-#mw-head div.darkvectorMenu h3 {
+#mw-head div.darkvectorbaroMenu h3 {
     float: left;
     background-image: url('images/tab-break.png');
     background-repeat: no-repeat;
     background-position: bottom right;
     margin-left: -1px;
     font-size: 1em;
-    height: 2.5em;
+    height: 5em;
     padding-right: 1px;
     margin-right: -1px
 }
 
-div.darkvectorMenu h3 span {
+div.darkvectorbaroMenu h3 span {
     display: block;
     font-size: .8em;
     padding-left: .7em;
@@ -824,7 +1204,7 @@ div.darkvectorMenu h3 span {
     color: #656565
 }
 
-div.darkvectorMenu h3 a {
+div.darkvectorbaroMenu h3 a {
     position: absolute;
     top: 0;
     right: 0;
@@ -841,22 +1221,22 @@ div.darkvectorMenu h3 a {
     transition: background-position 250ms
 }
 
-div.darkvectorMenu.menuForceShow h3 a {
+div.darkvectorbaroMenu.menuForceShow h3 a {
     background-position: 100% 100%
 }
 
-div.darkvectorMenuFocus h3 a {
+div.darkvectorbaroMenuFocus h3 a {
     background-image: url('images/arrow-down-focus-icon.png');
     background-image: -webkit-linear-gradient(transparent, transparent), url('images/arrow-down-focus-icon.svg');
     background-image: linear-gradient(transparent, transparent), url('images/arrow-down-focus-icon.svg')
 }
 
-div.darkvectorMenu div.menu {
+div.darkvectorbaroMenu div.menu {
     min-width: 100%;
     position: absolute;
     top: 2.5em;
     left: -1px;
-    background-color: white;
+	background-color: #0c0d0b;
     border: solid 1px silver;
     border-top-width: 0;
     clear: both;
@@ -864,12 +1244,12 @@ div.darkvectorMenu div.menu {
     display: none
 }
 
-div.darkvectorMenu:hover div.menu,
-div.darkvectorMenu.menuForceShow div.menu {
+div.darkvectorbaroMenu:hover div.menu,
+div.darkvectorbaroMenu.menuForceShow div.menu {
     display: block
 }
 
-div.darkvectorMenu ul {
+div.darkvectorbaroMenu ul {
     list-style-type: none;
     list-style-image: none;
     padding: 0;
@@ -877,39 +1257,39 @@ div.darkvectorMenu ul {
     text-align: left
 }
 
-div.darkvectorMenu ul,
+div.darkvectorbaroMenu ul,
 x:-moz-any-link {
     min-width: 5em
 }
 
-div.darkvectorMenu ul,
+div.darkvectorbaroMenu ul,
 x:-moz-any-link,
 x:default {
     min-width: 0
 }
 
-div.darkvectorMenu li {
+div.darkvectorbaroMenu li {
     padding: 0;
     margin: 0;
     text-align: left;
     line-height: 1em
 }
 
-div.darkvectorMenu li a {
+div.darkvectorbaroMenu li a {
     display: inline-block;
     padding: .5em;
     white-space: nowrap;
-    color: #e69710;
+    color: #add4ba;
     cursor: pointer;
     font-size: .8em
 }
 
-div.darkvectorMenu li>a {
+div.darkvectorbaroMenu li>a {
     display: block
 }
 
-div.darkvectorMenu li.selected a,
-div.darkvectorMenu li.selected a:visited {
+div.darkvectorbaroMenu li.selected a,
+div.darkvectorbaroMenu li.selected a:visited {
     color: #333;
     text-decoration: none
 }
@@ -1036,19 +1416,14 @@ div.darkvectorMenu li.selected a:visited {
     height: 5em;
     background-position: bottom left;
     background-repeat: repeat-x;
-    background-image: url('images/page-fade.png');
-    background-color: #2a2a2a;
-    background-image: -moz-linear-gradient(top, #333 50%, #2a2a2a 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #333), color-stop(100%, #2a2a2a));
-    background-image: -webkit-linear-gradient(top, #333 50%, #2a2a2a 100%);
-    background-image: linear-gradient(#333 50%, #2a2a2a 100%);
-    background-color: #333
+    background-image: none;
+    background-color: transparent;
 }
 
 #mw-head-base {
     margin-top: -5em;
     margin-left: 10em;
-    height: 5em
+    height: 7.5em
 }
 
 #mw-head {
@@ -1066,28 +1441,40 @@ div.darkvectorMenu li.selected a:visited {
 #left-navigation {
     float: left;
     margin-left: 10em;
-    margin-top: 2.5em;
+    margin-top: 5em;
     margin-bottom: -2.5em;
     display: inline
 }
 
 #right-navigation {
     float: right;
-    margin-top: 2.5em
+    margin-top: 5em
 }
 
 #p-logo {
+    pointer-events: none;
     position: absolute;
-    top: -160px;
+    top: -128px;
     left: 0;
-    width: 10em;
-    height: 160px
+    width: 20em;
+    height: 128px
 }
 
-#p-logo a {
+#p-logo a.mwlogo-a1 {
+    pointer-events: all;
+    display: block;
+    width: 20em;
+    height: 5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-decoration: none
+}
+
+#p-logo a.mwlogo-a2 {
+    pointer-events: all;
     display: block;
     width: 10em;
-    height: 160px;
+    height: 3em;
     background-repeat: no-repeat;
     background-position: center center;
     text-decoration: none
@@ -1096,7 +1483,7 @@ div.darkvectorMenu li.selected a:visited {
 #mw-panel {
     font-size: inherit;
     position: absolute;
-    top: 160px;
+    top: 128px;
     padding-top: 1em;
     width: 10em;
     left: 0
@@ -1142,11 +1529,11 @@ div.darkvectorMenu li.selected a:visited {
 }
 
 #mw-panel .portal .body ul li a {
-    color: #e69710
+    color: #add4ba
 }
 
 #mw-panel .portal .body ul li a:visited {
-    color: #D28A0D
+    color: #add4ba
 }
 
 #mw-panel .portal.first {
@@ -1169,7 +1556,8 @@ div.darkvectorMenu li.selected a:visited {
     margin-left: 10em;
     margin-top: 0;
     padding: .75em;
-    direction: ltr
+    direction: ltr;
+    background-color: rgba(0,0,0,0.7);
 }
 
 #footer ul {
@@ -1222,11 +1610,11 @@ body.ltr #footer #footer-places {
 list-style-type:inherit;
 background-color: transparent;
 border-color:#666;
-color:#db8200
+color:#add4ba
 }
 .toctogglelabel {
     cursor: pointer;
-    color: #db8200
+    color: #add4ba
 }
 .mw-changeslist-legend {
      color: #a9a9a9;
@@ -1239,16 +1627,55 @@ sup.reference:target {
     background-color: #663300 
 }
 .mw-editfont-monospace {
-    background-color: #393939
+    color: #aaa;
+    background-color: #151515
 }
 .diff.diff-contentalign-left {
-    background-color: #393939
+    background-color: #121212
 }
 .catlinks {
-    background-color: #393939
+    background-color: #121212
 }
 .mw-createacct-benefits-list p{
     color: #c9c9c9
 }
-div#mw-panel div.portal div.body ul li a:visited{color:#db8200}
-div#mw-panel div.portal div.body ul li a{color:#e69710}
+
+div#mw-panel div.portal div.body { margin: 0 0 0 0.5em }
+
+div#mw-panel div.portal div.body ul li a:visited,
+div#mw-panel div.portal div.body ul li a {
+    color: #e4d9a7;
+    display: block;
+    font-size: 1.15em;
+}
+
+div#mw-panel div.portal h3 {
+    text-transform: uppercase; color: black; background: rgb(181,127,69);
+    background: -moz-linear-gradient(90deg, rgba(181,127,69,1) 43%, rgba(0,0,0,0) 99%);
+    background: -webkit-linear-gradient(90deg, rgba(181,127,69,1) 43%, rgba(0,0,0,0) 99%);
+    background: linear-gradient(90deg, rgba(181,127,69,1) 43%, rgba(0,0,0,0) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b57f45",endColorstr="#000000",GradientType=1);
+    font-weight: 600;
+    padding: 0.5em;
+    margin-bottom: 0.5em
+}
+
+div#mw-panel div.portal div.body ul li {
+    padding: 0.3em;
+}
+
+div#mw-panel div.portal div.body ul li:hover {
+    background: rgb(27,128,92);
+    background: -moz-linear-gradient(90deg, rgba(27,128,92,1) 43%, rgba(0,0,0,0) 99%);
+    background: -webkit-linear-gradient(90deg, rgba(27,128,92,1) 43%, rgba(0,0,0,0) 99%);
+    background: linear-gradient(90deg, rgba(27,128,92,1) 43%, rgba(0,0,0,0) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b805c",endColorstr="#000000",GradientType=1);
+}
+
+div#mw-panel div.portal div.body ul li a:hover {
+    text-decoration: none;
+}
+
+div#mw-panel div.portal div.body ul li#n-Discord:hover {
+    background: none;
+}
