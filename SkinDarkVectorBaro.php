@@ -38,7 +38,7 @@ class SkinDarkVectorBaro extends SkinTemplate
     private $darkvectorbaroConfig;
 
 	public function __construct( $options ) {
-		$this->darkvectorConfig = ConfigFactory::getDefaultInstance()->makeConfig( 'darkvectorbaro' );
+		$this->darkvectorbaroConfig = ConfigFactory::getDefaultInstance()->makeConfig( 'darkvectorbaro' );
 		$options['bodyOnly'] = true;
 		parent::__construct( $options );
 	}
