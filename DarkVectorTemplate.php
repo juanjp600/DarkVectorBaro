@@ -1,6 +1,7 @@
 <?php
+
 /**
- * DarkVector - Modern version of MonoBook with fresh look and many usability
+ * DarkVectorBaro - Modern version of MonoBook with fresh look and many usability
  * improvements.
  *
  * This program is free software; you can redistribute it and/or modify
@@ -23,21 +24,23 @@
  */
 
 /**
- * QuickTemplate class for DarkVector skin
+ * QuickTemplate class for DarkVectorBaro skin
  * @ingroup Skins
  */
-class DarkVectorTemplate extends BaseTemplate {
+class DarkVectorBaroTemplate extends BaseTemplate
+{
 	/* Functions */
 
 	/**
 	 * Outputs the entire contents of the (X)HTML page
 	 */
-	public function execute() {
+	public function execute()
+	{
 
 		// Build additional attributes for navigation urls
 		$nav = $this->data['content_navigation'];
 
-		if ( $this->config->get( 'DarkVectorUseIconWatch' ) ) {
+		if ( $this->config->get( 'DarkVectorBaroUseIconWatch' ) ) {
 			$user = $this->getSkin()->getUser();
 			$relevantTitle = $this->getSkin()->getRelevantTitle();
 			$isWatched = false;
@@ -54,35 +57,35 @@ class DarkVectorTemplate extends BaseTemplate {
 				? 'unwatch'
 				: 'watch';
 
-			if ( isset( $nav['actions'][$mode] ) ) {
+			if (isset($nav['actions'][$mode])) {
 				$nav['views'][$mode] = $nav['actions'][$mode];
-				$nav['views'][$mode]['class'] = rtrim( 'icon ' . $nav['views'][$mode]['class'], ' ' );
+				$nav['views'][$mode]['class'] = rtrim('icon ' . $nav['views'][$mode]['class'], ' ');
 				$nav['views'][$mode]['primary'] = true;
-				unset( $nav['actions'][$mode] );
+				unset($nav['actions'][$mode]);
 			}
 		}
 
 		$xmlID = '';
-		foreach ( $nav as $section => $links ) {
-			foreach ( $links as $key => $link ) {
-				if ( $section == 'views' && !( isset( $link['primary'] ) && $link['primary'] ) ) {
-					$link['class'] = rtrim( 'collapsible ' . $link['class'], ' ' );
+		foreach ($nav as $section => $links) {
+			foreach ($links as $key => $link) {
+				if ($section == 'views' && !(isset($link['primary']) && $link['primary'])) {
+					$link['class'] = rtrim('collapsible ' . $link['class'], ' ');
 				}
 
-				$xmlID = isset( $link['id'] ) ? $link['id'] : 'ca-' . $xmlID;
+				$xmlID = isset($link['id']) ? $link['id'] : 'ca-' . $xmlID;
 				$nav[$section][$key]['attributes'] =
 					' id="' . Sanitizer::escapeIdForAttribute( $xmlID ) . '"';
 				if ( isset( $link['class'] ) && $link['class'] ) {
 					$nav[$section][$key]['attributes'] .=
-						' class="' . htmlspecialchars( $link['class'] ) . '"';
-					unset( $nav[$section][$key]['class'] );
+						' class="' . htmlspecialchars($link['class']) . '"';
+					unset($nav[$section][$key]['class']);
 				}
-				if ( isset( $link['tooltiponly'] ) && $link['tooltiponly'] ) {
+				if (isset($link['tooltiponly']) && $link['tooltiponly']) {
 					$nav[$section][$key]['key'] =
-						Linker::tooltip( $xmlID );
+						Linker::tooltip($xmlID);
 				} else {
 					$nav[$section][$key]['key'] =
-						Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( $xmlID ) );
+						Xml::expandAttributes(Linker::tooltipAndAccesskeyAttribs($xmlID));
 				}
 			}
 		}
@@ -92,13 +95,13 @@ class DarkVectorTemplate extends BaseTemplate {
 		$this->data['variant_urls'] = $nav['variants'];
 
 		// Reverse horizontally rendered navigation elements
-		if ( $this->data['rtl'] ) {
+		if ($this->data['rtl']) {
 			$this->data['view_urls'] =
-				array_reverse( $this->data['view_urls'] );
+				array_reverse($this->data['view_urls']);
 			$this->data['namespace_urls'] =
-				array_reverse( $this->data['namespace_urls'] );
+				array_reverse($this->data['namespace_urls']);
 			$this->data['personal_urls'] =
-				array_reverse( $this->data['personal_urls'] );
+				array_reverse($this->data['personal_urls']);
 		}
 
 		$this->data['pageLanguage'] =
@@ -112,110 +115,113 @@ class DarkVectorTemplate extends BaseTemplate {
 			<a id="top"></a>
 
 			<?php
-			if ( $this->data['sitenotice'] ) {
-				?>
-				<div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div>
+			if ($this->data['sitenotice']) {
+			?>
+				<div id="siteNotice"><?php $this->html('sitenotice') ?></div>
 			<?php
 			}
 			?>
 			<?php
-			if ( is_callable( array( $this, 'getIndicators' ) ) ) {
+			if (is_callable(array($this, 'getIndicators'))) {
 				echo $this->getIndicators();
 			}
 			// Loose comparison with '!=' is intentional, to catch null and false too, but not '0'
-			if ( $this->data['title'] != '' ) {
+			if ($this->data['title'] != '') {
 			?>
-			<h1 id="firstHeading" class="firstHeading" lang="<?php $this->text( 'pageLanguage' ); ?>"><?php
-				$this->html( 'title' )
-			?></h1>
+				<h1 id="firstHeading" class="firstHeading" lang="<?php $this->text('pageLanguage'); ?>"><?php
+																										$this->html('title')
+																										?></h1>
 			<?php
 			} ?>
-			<?php $this->html( 'prebodyhtml' ) ?>
+			<?php $this->html('prebodyhtml') ?>
 			<div id="bodyContent" class="mw-body-content">
 				<?php
-				if ( $this->data['isarticle'] ) {
-					?>
-					<div id="siteSub"><?php $this->msg( 'tagline' ) ?></div>
+				if ($this->data['isarticle']) {
+				?>
+					<div id="siteSub"><?php $this->msg('tagline') ?></div>
 				<?php
 				}
 				?>
-				<div id="contentSub"<?php $this->html( 'userlangattributes' ) ?>><?php
-					$this->html( 'subtitle' )
-				?></div>
+				<div id="contentSub" <?php $this->html('userlangattributes') ?>><?php
+																				$this->html('subtitle')
+																				?></div>
 				<?php
-				if ( $this->data['undelete'] ) {
-					?>
-					<div id="contentSub2"><?php $this->html( 'undelete' ) ?></div>
+				if ($this->data['undelete']) {
+				?>
+					<div id="contentSub2"><?php $this->html('undelete') ?></div>
 				<?php
 				}
 				?>
 				<?php
-				if ( $this->data['newtalk'] ) {
-					?>
-					<div class="usermessage"><?php $this->html( 'newtalk' ) ?></div>
+				if ($this->data['newtalk']) {
+				?>
+					<div class="usermessage"><?php $this->html('newtalk') ?></div>
 				<?php
 				}
 				?>
 				<div id="jump-to-nav" class="mw-jump">
-					<?php $this->msg( 'jumpto' ) ?>
+					<?php $this->msg('jumpto') ?>
 					<a href="#mw-head"><?php
-						$this->msg( 'jumptonavigation' )
-					?></a><?php $this->msg( 'comma-separator' ) ?>
-					<a href="#p-search"><?php $this->msg( 'jumptosearch' ) ?></a>
+										$this->msg('jumptonavigation')
+										?></a><?php $this->msg('comma-separator') ?>
+					<a href="#p-search"><?php $this->msg('jumptosearch') ?></a>
 				</div>
 				<?php
-				$this->html( 'bodycontent' );
+				$this->html('bodycontent');
 
-				if ( $this->data['printfooter'] ) {
-					?>
+				if ($this->data['printfooter']) {
+				?>
 					<div class="printfooter">
-						<?php $this->html( 'printfooter' ); ?>
+						<?php $this->html('printfooter'); ?>
 					</div>
 				<?php
 				}
 
-				if ( $this->data['catlinks'] ) {
-					$this->html( 'catlinks' );
+				if ($this->data['catlinks']) {
+					$this->html('catlinks');
 				}
 
-				if ( $this->data['dataAfterContent'] ) {
-					$this->html( 'dataAfterContent' );
+				if ($this->data['dataAfterContent']) {
+					$this->html('dataAfterContent');
 				}
 				?>
 				<div class="visualClear"></div>
-				<?php $this->html( 'debughtml' ); ?>
+				<?php $this->html('debughtml'); ?>
 			</div>
 		</div>
 		<div id="mw-navigation">
-			<h2><?php $this->msg( 'navigation-heading' ) ?></h2>
+			<h2><?php $this->msg('navigation-heading') ?></h2>
 
 			<div id="mw-head">
-				<?php $this->renderNavigation( 'PERSONAL' ); ?>
+				<?php $this->renderNavigation('PERSONAL'); ?>
 				<div id="left-navigation">
-					<?php $this->renderNavigation( array( 'NAMESPACES', 'VARIANTS' ) ); ?>
+					<?php $this->renderNavigation(array('NAMESPACES', 'VARIANTS')); ?>
 				</div>
 				<div id="right-navigation">
-					<?php $this->renderNavigation( array( 'VIEWS', 'ACTIONS', 'SEARCH' ) ); ?>
+					<?php $this->renderNavigation(array('VIEWS', 'ACTIONS', 'SEARCH')); ?>
 				</div>
 			</div>
 			<div id="mw-panel">
-				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="<?php
-					echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] )
-					?>" <?php
-					echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) )
+				<div id="p-logo" role="banner" class="mw-wiki-logo"><a class="mwlogo-a1" href="<?php
+																								echo htmlspecialchars($this->data['nav_urls']['mainpage']['href'])
+																								?>" <?php
+					echo Xml::expandAttributes(Linker::tooltipAndAccesskeyAttribs('p-logo'))
+					?>></a><a class="mwlogo-a2" href="
+				<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href'])
+				?>" <?php echo Xml::expandAttributes(Linker::tooltipAndAccesskeyAttribs('p-logo'))
 					?>></a></div>
-				<?php $this->renderPortals( $this->data['sidebar'] ); ?>
+				<?php $this->renderPortals($this->data['sidebar']); ?>
 			</div>
 		</div>
-		<div id="footer" role="contentinfo"<?php $this->html( 'userlangattributes' ) ?>>
+		<div id="footer" role="contentinfo" <?php $this->html('userlangattributes') ?>>
 			<?php
-			foreach ( $this->getFooterLinks() as $category => $links ) {
-				?>
+			foreach ($this->getFooterLinks() as $category => $links) {
+			?>
 				<ul id="footer-<?php echo $category ?>">
 					<?php
-					foreach ( $links as $link ) {
-						?>
-						<li id="footer-<?php echo $category ?>-<?php echo $link ?>"><?php $this->html( $link ) ?></li>
+					foreach ($links as $link) {
+					?>
+						<li id="footer-<?php echo $category ?>-<?php echo $link ?>"><?php $this->html($link) ?></li>
 					<?php
 					}
 					?>
@@ -236,12 +242,12 @@ class DarkVectorTemplate extends BaseTemplate {
 				?>
 				<ul id="footer-icons" class="noprint">
 					<?php
-					foreach ( $footericons as $blockName => $footerIcons ) {
-						?>
-						<li id="footer-<?php echo htmlspecialchars( $blockName ); ?>ico">
+					foreach ($footericons as $blockName => $footerIcons) {
+					?>
+						<li id="footer-<?php echo htmlspecialchars($blockName); ?>ico">
 							<?php
-							foreach ( $footerIcons as $icon ) {
-								echo $this->getSkin()->makeFooterIcon( $icon );
+							foreach ($footerIcons as $icon) {
+								echo $this->getSkin()->makeFooterIcon($icon);
 							}
 							?>
 						</li>
@@ -262,39 +268,40 @@ class DarkVectorTemplate extends BaseTemplate {
 	 *
 	 * @param array $portals
 	 */
-	protected function renderPortals( $portals ) {
+	protected function renderPortals($portals)
+	{
 		// Force the rendering of the following portals
-		if ( !isset( $portals['SEARCH'] ) ) {
+		if (!isset($portals['SEARCH'])) {
 			$portals['SEARCH'] = true;
 		}
-		if ( !isset( $portals['TOOLBOX'] ) ) {
+		if (!isset($portals['TOOLBOX'])) {
 			$portals['TOOLBOX'] = true;
 		}
-		if ( !isset( $portals['LANGUAGES'] ) ) {
+		if (!isset($portals['LANGUAGES'])) {
 			$portals['LANGUAGES'] = true;
 		}
 		// Render portals
-		foreach ( $portals as $name => $content ) {
-			if ( $content === false ) {
+		foreach ($portals as $name => $content) {
+			if ($content === false) {
 				continue;
 			}
 
 			// Numeric strings gets an integer when set as key, cast back - T73639
 			$name = (string)$name;
 
-			switch ( $name ) {
+			switch ($name) {
 				case 'SEARCH':
 					break;
 				case 'TOOLBOX':
 					$this->renderPortal( 'tb', $this->data['sidebar']['TOOLBOX'], 'toolbox', 'SkinTemplateToolboxEnd' );
 					break;
 				case 'LANGUAGES':
-					if ( $this->data['language_urls'] !== false ) {
-						$this->renderPortal( 'lang', $this->data['language_urls'], 'otherlanguages' );
+					if ($this->data['language_urls'] !== false) {
+						$this->renderPortal('lang', $this->data['language_urls'], 'otherlanguages');
 					}
 					break;
 				default:
-					$this->renderPortal( $name, $content );
+					$this->renderPortal($name, $content);
 					break;
 			}
 		}
@@ -306,8 +313,9 @@ class DarkVectorTemplate extends BaseTemplate {
 	 * @param null|string $msg
 	 * @param null|string|array $hook
 	 */
-	protected function renderPortal( $name, $content, $msg = null, $hook = null ) {
-		if ( $msg === null ) {
+	protected function renderPortal($name, $content, $msg = null, $hook = null)
+	{
+		if ($msg === null) {
 			$msg = $name;
 		}
 		$msgObj = wfMessage( $msg );
@@ -322,24 +330,24 @@ class DarkVectorTemplate extends BaseTemplate {
 				echo htmlspecialchars( $msgObj->exists() ? $msgObj->text() : $msg );
 				?></h3>
 
-			<div class="body">
-				<?php
-				if ( is_array( $content ) ) {
+				<div class="body">
+					<?php
+					if (is_array($content)) {
 					?>
-					<ul>
-						<?php
-						foreach ( $content as $key => $val ) {
-							echo $this->makeListItem( $key, $val );
-						}
-						if ( $hook !== null ) {
-							Hooks::run( $hook, array( &$this, true ) );
-						}
-						?>
-					</ul>
-				<?php
-				} else {
-					echo $content; /* Allow raw HTML block to be defined by extensions */
-				}
+						<ul>
+							<?php
+							foreach ($content as $key => $val) {
+								echo $this->makeListItem($key, $val);
+							}
+							if ($hook !== null) {
+								Hooks::run($hook, array(&$this, true));
+							}
+							?>
+						</ul>
+					<?php
+					} else {
+						echo $content; /* Allow raw HTML block to be defined by extensions */
+					}
 
 				$skin = $this->getSkin();
 				if ( method_exists( $skin, 'getAfterPortlet' ) ) {
@@ -350,7 +358,7 @@ class DarkVectorTemplate extends BaseTemplate {
 				?>
 			</div>
 		</div>
-	<?php
+		<?php
 	}
 
 	/**
@@ -359,212 +367,213 @@ class DarkVectorTemplate extends BaseTemplate {
 	 *
 	 * @param array $elements
 	 */
-	protected function renderNavigation( $elements ) {
+	protected function renderNavigation($elements)
+	{
 		// If only one element was given, wrap it in an array, allowing more
 		// flexible arguments
-		if ( !is_array( $elements ) ) {
-			$elements = array( $elements );
+		if (!is_array($elements)) {
+			$elements = array($elements);
 			// If there's a series of elements, reverse them when in RTL mode
-		} elseif ( $this->data['rtl'] ) {
-			$elements = array_reverse( $elements );
+		} elseif ($this->data['rtl']) {
+			$elements = array_reverse($elements);
 		}
 		// Render elements
-		foreach ( $elements as $name => $element ) {
-			switch ( $element ) {
+		foreach ($elements as $name => $element) {
+			switch ($element) {
 				case 'NAMESPACES':
-					?>
-					<div id="p-namespaces" role="navigation" class="darkvectorTabs<?php
-					if ( count( $this->data['namespace_urls'] ) == 0 ) {
-						echo ' emptyPortlet';
-					}
-					?>" aria-labelledby="p-namespaces-label">
-						<h3 id="p-namespaces-label"><?php $this->msg( 'namespaces' ) ?></h3>
-						<ul<?php $this->html( 'userlangattributes' ) ?>>
+		?>
+					<div id="p-namespaces" role="navigation" class="darkvectorbaroTabs<?php
+																						if (count($this->data['namespace_urls']) == 0) {
+																							echo ' emptyPortlet';
+																						}
+																						?>" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label"><?php $this->msg('namespaces') ?></h3>
+						<ul<?php $this->html('userlangattributes') ?>>
 							<?php
-							foreach ( $this->data['namespace_urls'] as $link ) {
-								?>
+							foreach ($this->data['namespace_urls'] as $link) {
+							?>
 								<li <?php echo $link['attributes'] ?>><span><a href="<?php
-										echo htmlspecialchars( $link['href'] )
-										?>" <?php
-										echo $link['key'];
-										if ( isset ( $link['rel'] ) ) {
-											echo ' rel="' . htmlspecialchars( $link['rel'] ) . '"';
-										}
-										?>><?php
-											echo htmlspecialchars( $link['text'] )
-											?></a></span></li>
+																						echo htmlspecialchars($link['href'])
+																						?>" <?php
+																							echo $link['key'];
+																							if (isset($link['rel'])) {
+																								echo ' rel="' . htmlspecialchars($link['rel']) . '"';
+																							}
+																							?>><?php
+																								echo htmlspecialchars($link['text'])
+																								?></a></span></li>
 							<?php
 							}
 							?>
-						</ul>
+							</ul>
 					</div>
-					<?php
+				<?php
 					break;
 				case 'VARIANTS':
-					?>
-					<div id="p-variants" role="navigation" class="darkvectorMenu<?php
-					if ( count( $this->data['variant_urls'] ) == 0 ) {
-						echo ' emptyPortlet';
-					}
-					?>" aria-labelledby="p-variants-label">
+				?>
+					<div id="p-variants" role="navigation" class="darkvectorbaroMenu<?php
+																					if (count($this->data['variant_urls']) == 0) {
+																						echo ' emptyPortlet';
+																					}
+																					?>" aria-labelledby="p-variants-label">
 						<?php
 						// Replace the label with the name of currently chosen variant, if any
-						$variantLabel = $this->getMsg( 'variants' )->text();
-						foreach ( $this->data['variant_urls'] as $link ) {
-							if ( stripos( $link['attributes'], 'selected' ) !== false ) {
+						$variantLabel = $this->getMsg('variants')->text();
+						foreach ($this->data['variant_urls'] as $link) {
+							if (stripos($link['attributes'], 'selected') !== false) {
 								$variantLabel = $link['text'];
 								break;
 							}
 						}
 						?>
 						<h3 id="p-variants-label">
-							<span><?php echo htmlspecialchars( $variantLabel ) ?></span><a href="#"></a>
+							<span><?php echo htmlspecialchars($variantLabel) ?></span><a href="#"></a>
 						</h3>
 
 						<div class="menu">
 							<ul>
 								<?php
-								foreach ( $this->data['variant_urls'] as $link ) {
-									?>
-									<li<?php echo $link['attributes'] ?>><a href="<?php
-										echo htmlspecialchars( $link['href'] )
-										?>" lang="<?php
-										echo htmlspecialchars( $link['lang'] )
-										?>" hreflang="<?php
-										echo htmlspecialchars( $link['hreflang'] )
-										?>" <?php
-										echo $link['key']
-										?>><?php
-											echo htmlspecialchars( $link['text'] )
-											?></a></li>
-								<?php
-								}
+								foreach ($this->data['variant_urls'] as $link) {
 								?>
+									<li<?php echo $link['attributes'] ?>><a href="<?php
+																					echo htmlspecialchars($link['href'])
+																					?>" lang="<?php
+																								echo htmlspecialchars($link['lang'])
+																								?>" hreflang="<?php
+																												echo htmlspecialchars($link['hreflang'])
+																												?>" <?php
+																													echo $link['key']
+																													?>><?php
+																														echo htmlspecialchars($link['text'])
+																														?></a></li>
+									<?php
+								}
+									?>
 							</ul>
 						</div>
 					</div>
-					<?php
+				<?php
 					break;
 				case 'VIEWS':
-					?>
-					<div id="p-views" role="navigation" class="darkvectorTabs<?php
-					if ( count( $this->data['view_urls'] ) == 0 ) {
-						echo ' emptyPortlet';
-					}
-					?>" aria-labelledby="p-views-label">
-						<h3 id="p-views-label"><?php $this->msg( 'views' ) ?></h3>
-						<ul<?php $this->html( 'userlangattributes' ) ?>>
+				?>
+					<div id="p-views" role="navigation" class="darkvectorbaroTabs<?php
+																					if (count($this->data['view_urls']) == 0) {
+																						echo ' emptyPortlet';
+																					}
+																					?>" aria-labelledby="p-views-label">
+						<h3 id="p-views-label"><?php $this->msg('views') ?></h3>
+						<ul<?php $this->html('userlangattributes') ?>>
 							<?php
-							foreach ( $this->data['view_urls'] as $link ) {
-								?>
-								<li<?php echo $link['attributes'] ?>><span><a href="<?php
-										echo htmlspecialchars( $link['href'] )
-										?>" <?php
-										echo $link['key'];
-										if ( isset ( $link['rel'] ) ) {
-											echo ' rel="' . htmlspecialchars( $link['rel'] ) . '"';
-										}
-										?>><?php
-											// $link['text'] can be undefined - bug 27764
-											if ( array_key_exists( 'text', $link ) ) {
-												echo array_key_exists( 'img', $link )
-													? '<img src="' . $link['img'] . '" alt="' . $link['text'] . '" />'
-													: htmlspecialchars( $link['text'] );
-											}
-											?></a></span></li>
-							<?php
-							}
+							foreach ($this->data['view_urls'] as $link) {
 							?>
-						</ul>
+								<li<?php echo $link['attributes'] ?>><span><a href="<?php
+																					echo htmlspecialchars($link['href'])
+																					?>" <?php
+																						echo $link['key'];
+																						if (isset($link['rel'])) {
+																							echo ' rel="' . htmlspecialchars($link['rel']) . '"';
+																						}
+																						?>><?php
+																							// $link['text'] can be undefined - bug 27764
+																							if (array_key_exists('text', $link)) {
+																								echo array_key_exists('img', $link)
+																									? '<img src="' . $link['img'] . '" alt="' . $link['text'] . '" />'
+																									: htmlspecialchars($link['text']);
+																							}
+																							?></a></span></li>
+								<?php
+							}
+								?>
+								</ul>
 					</div>
-					<?php
+				<?php
 					break;
 				case 'ACTIONS':
-					?>
-					<div id="p-cactions" role="navigation" class="darkvectorMenu<?php
-					if ( count( $this->data['action_urls'] ) == 0 ) {
-						echo ' emptyPortlet';
-					}
-					?>" aria-labelledby="p-cactions-label">
+				?>
+					<div id="p-cactions" role="navigation" class="darkvectorbaroMenu<?php
+																					if (count($this->data['action_urls']) == 0) {
+																						echo ' emptyPortlet';
+																					}
+																					?>" aria-labelledby="p-cactions-label">
 						<h3 id="p-cactions-label"><span><?php
-							$this->msg( 'darkvector-more-actions' )
-						?></span><a href="#"></a></h3>
+														$this->msg('darkvectorbaro-more-actions')
+														?></span><a href="#"></a></h3>
 
 						<div class="menu">
-							<ul<?php $this->html( 'userlangattributes' ) ?>>
+							<ul<?php $this->html('userlangattributes') ?>>
 								<?php
-								foreach ( $this->data['action_urls'] as $link ) {
-									?>
+								foreach ($this->data['action_urls'] as $link) {
+								?>
 									<li<?php echo $link['attributes'] ?>>
 										<a href="<?php
-										echo htmlspecialchars( $link['href'] )
-										?>" <?php
-										echo $link['key'] ?>><?php echo htmlspecialchars( $link['text'] )
-											?></a>
-									</li>
-								<?php
+													echo htmlspecialchars($link['href'])
+													?>" <?php
+														echo $link['key'] ?>><?php echo htmlspecialchars($link['text'])
+																				?></a>
+										</li>
+									<?php
 								}
-								?>
-							</ul>
+									?>
+									</ul>
 						</div>
 					</div>
-					<?php
+				<?php
 					break;
 				case 'PERSONAL':
-					?>
+				?>
 					<div id="p-personal" role="navigation" class="<?php
-					if ( count( $this->data['personal_urls'] ) == 0 ) {
-						echo ' emptyPortlet';
-					}
-					?>" aria-labelledby="p-personal-label">
-						<h3 id="p-personal-label"><?php $this->msg( 'personaltools' ) ?></h3>
-						<ul<?php $this->html( 'userlangattributes' ) ?>>
+																	if (count($this->data['personal_urls']) == 0) {
+																		echo ' emptyPortlet';
+																	}
+																	?>" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label"><?php $this->msg('personaltools') ?></h3>
+						<ul<?php $this->html('userlangattributes') ?>>
 							<?php
 							$personalTools = $this->getPersonalTools();
-							foreach ( $personalTools as $key => $item ) {
-								echo $this->makeListItem( $key, $item );
+							foreach ($personalTools as $key => $item) {
+								echo $this->makeListItem($key, $item);
 							}
 							?>
-						</ul>
+							</ul>
 					</div>
-					<?php
+				<?php
 					break;
 				case 'SEARCH':
-					?>
+				?>
 					<div id="p-search" role="search">
-						<h3<?php $this->html( 'userlangattributes' ) ?>>
-							<label for="searchInput"><?php $this->msg( 'search' ) ?></label>
-						</h3>
+						<h3<?php $this->html('userlangattributes') ?>>
+							<label for="searchInput"><?php $this->msg('search') ?></label>
+							</h3>
 
-						<form action="<?php $this->text( 'wgScript' ) ?>" id="searchform">
-							<div<?php echo $this->config->get( 'DarkVectorUseSimpleSearch' ) ? ' id="simpleSearch"' : '' ?>>
-							<?php
-							echo $this->makeSearchInput( array( 'id' => 'searchInput' ) );
-							echo Html::hidden( 'title', $this->get( 'searchtitle' ) );
-							// We construct two buttons (for 'go' and 'fulltext' search modes),
-							// but only one will be visible and actionable at a time (they are
-							// overlaid on top of each other in CSS).
-							// * Browsers will use the 'fulltext' one by default (as it's the
-							//   first in tree-order), which is desirable when they are unable
-							//   to show search suggestions (either due to being broken or
-							//   having JavaScript turned off).
-							// * The mediawiki.searchSuggest module, after doing tests for the
-							//   broken browsers, removes the 'fulltext' button and handles
-							//   'fulltext' search itself; this will reveal the 'go' button and
-							//   cause it to be used.
-							echo $this->makeSearchButton(
-								'fulltext',
-								array( 'id' => 'mw-searchButton', 'class' => 'searchButton mw-fallbackSearchButton' )
-							);
-							echo $this->makeSearchButton(
-								'go',
-								array( 'id' => 'searchButton', 'class' => 'searchButton' )
-							);
-							?>
-							</div>
-						</form>
+							<form action="<?php $this->text('wgScript') ?>" id="searchform">
+								<div<?php echo $this->config->get('DarkVectorBaroUseSimpleSearch') ? ' id="simpleSearch"' : '' ?>>
+									<?php
+									echo $this->makeSearchInput(array('id' => 'searchInput'));
+									echo Html::hidden('title', $this->get('searchtitle'));
+									// We construct two buttons (for 'go' and 'fulltext' search modes),
+									// but only one will be visible and actionable at a time (they are
+									// overlaid on top of each other in CSS).
+									// * Browsers will use the 'fulltext' one by default (as it's the
+									//   first in tree-order), which is desirable when they are unable
+									//   to show search suggestions (either due to being broken or
+									//   having JavaScript turned off).
+									// * The mediawiki.searchSuggest module, after doing tests for the
+									//   broken browsers, removes the 'fulltext' button and handles
+									//   'fulltext' search itself; this will reveal the 'go' button and
+									//   cause it to be used.
+									echo $this->makeSearchButton(
+										'fulltext',
+										array('id' => 'mw-searchButton', 'class' => 'searchButton mw-fallbackSearchButton')
+									);
+									echo $this->makeSearchButton(
+										'go',
+										array('id' => 'searchButton', 'class' => 'searchButton')
+									);
+									?>
 					</div>
-					<?php
+					</form>
+					</div>
+<?php
 
 					break;
 			}
